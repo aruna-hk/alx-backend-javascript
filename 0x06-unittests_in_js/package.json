@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This project contains tasks for learning to create unittests in NodeJS.",
   "main": "0-calcul.js",
-  "type": "module",
   "scripts": {
     "test": "mocha"
   },
