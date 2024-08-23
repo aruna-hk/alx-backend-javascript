@@ -1,15 +1,11 @@
 const http = require('http');
-const PORT = 1245;
-const app = http.createServer();
 
-app.on('request', (req, res) => {
-  const responseText = 'Hello Holberton School!';
+// Create a local server to receive data from
+const server = http.createServer();
 
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Length', responseText.length);
-  res.statusCode = 200;
-  res.end(responseText);
+// Listen to the request event
+server.on('request', (request, res) => {
+  res.writeHead(200, { 'Content-Type': 'plain/text' });
+  res.end('Hello Holberton School!')
 });
-app.listen(PORT);
-
-module.exports = app;
+server.listen(1245)
